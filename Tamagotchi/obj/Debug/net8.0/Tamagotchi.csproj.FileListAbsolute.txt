@@ -1,0 +1,15 @@
+E:\test_C_Sharp_Game\Tamagotchi\bin\Debug\net8.0\Tamagotchi.exe
+E:\test_C_Sharp_Game\Tamagotchi\bin\Debug\net8.0\Tamagotchi.deps.json
+E:\test_C_Sharp_Game\Tamagotchi\bin\Debug\net8.0\Tamagotchi.runtimeconfig.json
+E:\test_C_Sharp_Game\Tamagotchi\bin\Debug\net8.0\Tamagotchi.dll
+E:\test_C_Sharp_Game\Tamagotchi\bin\Debug\net8.0\Tamagotchi.pdb
+E:\test_C_Sharp_Game\Tamagotchi\obj\Debug\net8.0\Tamagotchi.GeneratedMSBuildEditorConfig.editorconfig
+E:\test_C_Sharp_Game\Tamagotchi\obj\Debug\net8.0\Tamagotchi.AssemblyInfoInputs.cache
+E:\test_C_Sharp_Game\Tamagotchi\obj\Debug\net8.0\Tamagotchi.AssemblyInfo.cs
+E:\test_C_Sharp_Game\Tamagotchi\obj\Debug\net8.0\Tamagotchi.csproj.CoreCompileInputs.cache
+E:\test_C_Sharp_Game\Tamagotchi\obj\Debug\net8.0\Tamagotchi.sourcelink.json
+E:\test_C_Sharp_Game\Tamagotchi\obj\Debug\net8.0\Tamagotchi.dll
+E:\test_C_Sharp_Game\Tamagotchi\obj\Debug\net8.0\refint\Tamagotchi.dll
+E:\test_C_Sharp_Game\Tamagotchi\obj\Debug\net8.0\Tamagotchi.pdb
+E:\test_C_Sharp_Game\Tamagotchi\obj\Debug\net8.0\Tamagotchi.genruntimeconfig.cache
+E:\test_C_Sharp_Game\Tamagotchi\obj\Debug\net8.0\ref\Tamagotchi.dll
