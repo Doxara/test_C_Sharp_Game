@@ -1,15 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Numerics;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Tamagotchi
+﻿namespace Tamagotchi
 {
-    public class Pet
+    internal class Pet
     {
-        private string name = "No name";
+        private readonly string name = "No name";
         private uint health = 10;
         private uint hungry = 0;
         private uint tired = 0;
@@ -90,109 +83,114 @@ namespace Tamagotchi
         }
         public bool IsLiving { get { return isLiving; } }
         
-        private void DecreaseHealth()
+        private string DecreaseHealth()
         {
-            if (health > 0)
+            string mes = "";
+            if (health > 1)
             {  
-                if (health < 7)
+                if (health < 8)
                 {
-                    DecreaseHappy();
+                    mes+=DecreaseHappy();
                 }
                 health--; 
             }
-            else { PetIsSick(); }
+            else { mes += PetIsSick(); }
+            return mes;
         }
         private void IncreaseHealth()
         {
             if (health < 10)
             { health++; }
         }
-        private void DecreaseHappy()
+        private string DecreaseHappy()
         { 
             if (happy > 0) { happy--; }
             else
             {
-                Console.WriteLine("Your pet is totally unhappy!");
+                return "Your pet is totally unhappy!\n";
             }
+            return "";
         }
         private void IncreaseHappy()
         {
             if (happy < 10) { happy++; }
         }
-        private void DecreaseHungry()
+        private string DecreaseHungry()
         {
+            string mes = "";
             if (hungry > 0)
             {
                 hungry--;
-                IncreaseHappy();
                 if (hungry < 5)
                 {
                     IncreaseHealth();
                 }
+                if (hungry > 6)
+                {
+                    IncreaseHappy();
+                }
             }
             else
             {
-                DecreaseHealth();
-                DecreaseHappy();
+                mes += DecreaseHealth();
+                mes += "Your pet is overeating!\n";
+
             }
+            return mes;
         }
-        private void IncreaseHungry()
+        private string IncreaseHungry()
         {
+            string mes = "";
             if (hungry < 10)
             {
                 hungry++;
             }
             else
             {
-                Console.WriteLine("Your pet very want eat!");
-                DecreaseHealth();
+                mes += "Your pet very want eat!\n";
+                mes += DecreaseHealth();
             }
+            return mes;
         }
-        private void DecreaseTired()
+        private string IncreaseTired()
         {
-            if (tired > 5)
-            {
-                tired = 0;
-            }
-            else
-            {
-                Console.WriteLine("Your pet no want to sleep!");
-
-            }
-        }
-        private void IncreaseTired()
-        {
+            string mes = "";
             if (tired < 10)
             {
                 tired++;
             }
             else
             {
-                Console.WriteLine("Your pet want to sleep!");
-                DecreaseHappy();
+                mes += "Your pet want to sleep!\n";
+                mes += DecreaseHappy();
             }
+            return mes;
         }
-        private void PetIsSick()
+        private string PetIsSick()
         {
-            Console.WriteLine("Your pet is dead!!!!");
             isLiving = false;
+            return "Your pet is sick!!!!\n";
         }
-        public void FeedThePet()
+        public string FeedThePet()
         {
-            DecreaseHungry();
-            Console.WriteLine("You successfully fed your pet!");
+           string mes = DecreaseHungry();
+           return mes+"You successfully fed your pet!\n";
         }
-        public void PlayWithPet()
+        public string PlayWithPet()
         {
-            IncreaseTired();
-            IncreaseHungry();
+            string mes = "";
+            mes += IncreaseTired();
+            mes += IncreaseHungry();
             IncreaseHappy();
+            return mes + "You successfully play with pet!\n";
         }
-        public void RockThePetToSleep() 
+        public string RockThePetToSleep() 
         {
+            string mes = "";
             tired = 0;
-            DecreaseHappy();
-            IncreaseHungry();
+            mes += DecreaseHappy();
+            mes += IncreaseHungry();
+            return mes;
         }
         public string Status()
         {
