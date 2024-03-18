@@ -1,5 +1,5 @@
 
-/Tamagotchi/.vs
+/Tamagotchi/.vs/*
 Tamagotchi/.vs/ProjectEvaluation/tamagotchi.metadata.v7.bin
 Tamagotchi/.vs/ProjectEvaluation/tamagotchi.projects.v7.bin
 Tamagotchi/.vs/Tamagotchi/DesignTimeBuild/.dtbcache.v2
@@ -8,3 +8,4 @@ Tamagotchi/.vs/Tamagotchi/FileContentIndex/b391bcfe-0260-49c7-90a3-ff387602e689.
 Tamagotchi/.vs/Tamagotchi/v17/.futdcache.v2
 Tamagotchi/.vs/Tamagotchi/v17/.suo
 Tamagotchi/.vs/Tamagotchi/v17/DocumentLayout.json
+
